@@ -20,6 +20,8 @@ private Flight flight;
 		String airline = "Avianca";
 		flight = new Flight(numberOfFlight, portOfShipment,day, month, year, destinationCity,airline);
 
+		flight.setTime(new Time(10, 20, Time.AM));
+
 	}
 	
 	private void setupEscenary2() {
@@ -54,6 +56,7 @@ private Flight flight;
 		assertEquals(day, flight.getDay());
 		assertEquals(month, flight.getMonth());
 		assertEquals(year, flight.getYear());
+		assertEquals("10:20 AM",flight.getTime().toString());
 	}
 	
 	@Test 
